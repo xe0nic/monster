@@ -1,4 +1,4 @@
-FROM golang AS builder
+FROM golang:1.20.14 AS builder
 WORKDIR /go/src/github.com/alexellis/href-counter/
 RUN go env -w GO111MODULE=auto
 RUN go get -d -v golang.org/x/net/html  
